@@ -1,0 +1,140 @@
+body{
+    font-family: Righteous;
+}
+.nav-container {
+    /* background-color: #DE3333; */
+    grid-column: h;
+}
+.nav-bar > ul {
+    
+    /* border: solid 2px rgb(128, 67, 67); */
+    display: flex;
+    justify-content: space-evenly;
+}
+.achievements {
+    margin-right: auto;
+}
+ul > li {
+    list-style-type :none;
+    padding: 5%;
+    font-size: 30px;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-areas: 
+   'h h h h h h h h h h'
+   'm m m m m m m m m m'
+   'f f f f f f f f f f';
+}
+.title-container {
+    /* display: flex; */
+    /* border: solid 2px rgb(128, 67, 67); */
+    padding: 7%;
+    /* flex-direction: column; */
+}
+.title {
+    font-size: 100px;
+}
+.semicircle {
+    height: 40px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: burlywood;
+}
+.main-container {
+   grid-column: m;
+   display: flex;
+   flex-direction: column;
+}
+.footer-container {
+    /* border: solid 2px rgb(128, 67, 67); */
+    display: flex;
+    align-content: center;
+    grid-column: f;
+}
+
+.footer-container .my-name,.twitter,.github {
+    padding-right:30px ;
+    font-size: 20px;
+    align-content: center;
+}
+.my-name {
+    margin-left: auto;
+    font-size: 30px;
+    align-self: center;
+}
+.sub-title {
+    font-size: 24px;
+    color: rgb(59, 59, 59);
+   
+}
+
+.button {
+    background-color: #DE3333;
+    width: 10%;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 14px;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.25);
+    color: white;
+    margin-top: 20px;
+    align-self: center;
+}
+
+i {
+    color: black;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-container {
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    .title-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        font-size: 48px;
+    }
+    .nav-bar {
+        display: none;
+    }
+    .sub-title {
+        font-size: 20px;
+        align-self: center;
+    }
+    .button {
+        align-self: center;
+        width: 90px;
+    }
+    
+    .footer-container{
+        display: grid;
+        justify-content: end;
+        grid-template-areas: 
+        '. . . . m m m m . . . .'
+        '. . . . . g t . . . . .';
+        gap: 15px;
+        text-align: center;
+       
+    }
+
+    .footer-container > .my-name {
+        grid-column: m;
+       
+    }
+    .footer-container > .github{
+        grid-column: g;
+        
+    }
+    .footer-container > .twitter {
+        grid-column: t;
+    
+    }
+    
+
+  }
